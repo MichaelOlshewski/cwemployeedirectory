@@ -36,7 +36,6 @@ class App extends Component {
                             email={person.email}
                         />
                     ))}
-                    <MemberCard />
                 </MemberWrapper>
             </React.Fragment>
         );
