@@ -1,30 +1,44 @@
-import React, { Component, useState, useEffect } from "react";
+import React, { Component } from "react";
 import MemberWrapper from "./components/MemberWrapper/MemberWrapper";
 import MemberCard from "./components/MemberCard/MemberCard";
-import axios from "axios";
 import "./style.css";
 
 class App extends Component {
-    state = {};
-
-    employeeData = async () => {
-        try {
-            const res = await axios.get(
-                "https://randomuser.me/api/?results=200&nat=us"
-            );
-            console.log(res);
-        } catch (error) {
-            console.log(error);
-        }
+    state = {
+        loading: true,
+        people: [],
     };
 
+    async componentDidMount() {
+        const url = "https://randomuser.me/api/?results=200&nat=us";
+        const response = await fetch(url);
+        const data = await response.json();
+        this.setState({ loading: false, people: data.results });
+    }
+
     render() {
+        const employees = this.state.people;
         return (
-            <div className="App">
+            <React.Fragment>
+                {this.state.loading || !this.state.people ? (
+                    <div>loading...</div>
+                ) : (
+                    <div>results...</div>
+                )}
                 <MemberWrapper>
+                    {employees.map((person) => (
+                        <MemberCard
+                            key={person.id.value}
+                            name={person.name.first + " " + person.name.last}
+                            img={person.picture.large}
+                            location={person.location.city}
+                            phone={person.phone}
+                            email={person.email}
+                        />
+                    ))}
                     <MemberCard />
                 </MemberWrapper>
-            </div>
+            </React.Fragment>
         );
     }
 }
