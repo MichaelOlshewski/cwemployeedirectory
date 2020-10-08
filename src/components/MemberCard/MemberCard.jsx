@@ -11,7 +11,6 @@ function MemberCard({ name, title, location, phone, email, img }) {
                     <img src={img} alt={name} />
                 </LazyLoad>
                 <h2>{name}</h2>
-                <h3>{title}</h3>
             </div>
             <hr />
             <div className="card-contact">

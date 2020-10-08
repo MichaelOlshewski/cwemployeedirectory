@@ -6,4 +6,7 @@
     justify-content: space-around;
     align-content: flex-start;
     overflow: auto;
+    background-color: #212738;
+    width: 80%;
+    margin: 0 auto;
 }

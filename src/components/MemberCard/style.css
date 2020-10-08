@@ -31,3 +31,7 @@ a {
     padding-left: 10px;
     color: #edf2ef;
 }
+
+img {
+    border-radius: 50%;
+}

@@ -7,7 +7,7 @@ body {
         segoe ui, arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #f8f8f8;
+    background-color: #212738;
 }
 
 /* Typography */
@@ -56,25 +56,25 @@ a {
 
 a:hover {
     text-decoration: none;
-    color: #4ce0d2;
+    color: #f8f8f8;
     transition: ease 0.5s;
 }
 
 /* Colors */
 .bg-color {
-    background-color: #f8f8f8;
+    background-color: #212738;
 }
 .bg-lighter-color {
-    background-color: #f8f8f8;
+    background-color: #212738;
 }
 .bg-lightest-color {
-    background-color: #f8f8f8;
+    background-color: #212738;
 }
 .text-color {
-    color: #4ce0d2;
+    color: #f8f8f8;
 }
 .interactive-color {
-    color: #86e1ff;
+    color: #f8f8f8;
 }
 
 /* —————————————————————————————————————————————
