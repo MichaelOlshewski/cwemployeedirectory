@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import Header from './components/Header/Header'
 import Main from "./components/Main/Main";
+import FilterBar from './components/FilterBar/FilterBar'
 import MemberWrapper from "./components/MemberWrapper/MemberWrapper";
 import MemberCard from "./components/MemberCard/MemberCard";
 import "./style.css";
@@ -22,11 +24,9 @@ class App extends Component {
         return (
             <React.Fragment>
                 <Main>
-                    {this.state.loading || !this.state.people ? (
-                        <div>loading...</div>
-                    ) : (
-                        <div>results...</div>
-                    )}
+                    <Header />
+                    <br/>
+                    <FilterBar />
                     <MemberWrapper>
                         {employees.map((person) => (
                             <MemberCard

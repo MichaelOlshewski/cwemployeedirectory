@@ -1,0 +1,45 @@
+.filterbarContainer {
+    margin: 0 auto;
+    text-align: center;
+    color: #212738;
+    background-color: #61DBFB;
+    height: 50px;
+    border-radius: 10px;
+    width: 80%;
+}
+
+.searchBar {
+    background-color: #212738;
+    height: 26px;
+    width: 200px;
+    border-radius: 10px;
+    padding: 5px 10px;
+    border: none;
+    color: #f8f8f8;
+    margin: 7px 10px;
+    float: left;
+}
+
+.searchBar:focus {
+    outline: none;
+}
+
+.button-group {
+    border-radius: 10px;
+    border: none;
+    display: inline-block;
+}
+
+.btn {
+    background-color: #212738;
+    color: #61DBFB;
+    border: none;
+    border-radius: 10px;
+    height: 100%;
+    padding: 10px;
+    margin: 7px 0;
+}
+
+.btn:focus {
+    outline: none;
+}
